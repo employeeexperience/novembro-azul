@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novembro Azul ROIT</title>
+    
+    <!-- Chosen Palette: Azul Corporativo (Baseado nas cores ROIT e Novembro Azul) -->
+    <!-- Cores: Azul Escuro (#152e3e) e Azul Claro (#169cdc) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+        
+        /* Poppins Regular (400) e Bold (700) foram importados */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F5F9FF; /* Branco-azul, equivalente a bg-blue-50 */
+        }
+        
+        .poppins-bold {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+        
+        .poppins-regular {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+        }
+
+        /* Ajuste de âncora para barra de navegação fixa */
+        :target::before {
+            content: "";
+            display: block;
+            height: 80px; 
+            margin: -80px 0 0;
+        }
+        
+        /* Ajuste de links de navegação para a nova cor de destaque */
+        .nav-link {
+            transition: color 0.3s, border-color 0.3s;
+        }
+        .nav-link.active, .nav-link:hover {
+            color: #152e3e; /* Azul escuro para hover/ativo */
+            border-color: #152e3e; /* Azul escuro para hover/ativo */
+        }
+        
+        /* Efeito de hover nos cards de pilar (manter) */
+        .step-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        /* Classes para o carrossel da Agenda (manter) */
+        .event-card {
+            min-width: 300px; /* Para garantir largura mínima no mobile */
+        }
+
+        /* Classe de destaque visual para o pilar selecionado */
+        .step-card.is-selected {
+            border-color: #152e3e !important; /* Borda Azul Escura */
+            box-shadow: 0 10px 15px -3px rgba(21, 46, 62, 0.3), 0 4px 6px -4px rgba(21, 46, 62, 0.1) !important;
+        }
+    </style>
+</head>
+<body class="bg-blue-50 text-gray-800">
+
+    <div id="main-content">
+        <!-- CABEÇALHO E NAVEGAÇÃO -->
+        <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+            <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex-shrink-0 flex items-center">
+                        <!-- Logo ROIT -->
+                        <img 
+                            src="https://placehold.co/150x40/152e3e/ffffff?text=Logo+ROIT" 
+                            alt="Logo ROIT" 
+                            class="h-10 w-auto"
+                            onerror="this.onerror=null; this.src='placeholder.png'; this.outerHTML='<div class=\'poppins-bold text-3xl\' style=\'color: #152e3e; line-height: 1;\'>ROIT</div>';"
+                        >
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <!-- Cor dos links alterada para Azul ROIT (#152e3e) -->
+                            <a href="#inicio" class="nav-link px-3 py-2 text-sm font-semibold border-b-2 border-transparent" style="color: #152e3e;">INÍCIO</a>
+                            <a href="#oquee" class="nav-link px-3 py-2 text-sm font-semibold border-b-2 border-transparent" style="color: #152e3e;">O QUE É</a>
+                            <a href="#prevencao" class="nav-link px-3 py-2 text-sm font-semibold border-b-2 border-transparent" style="color: #152e3e;">FATORES DE RISCO</a>
+                            <a href="#deteccao" class="nav-link px-3 py-2 text-sm font-semibold border-b-2 border-transparent" style="color: #152e3e;">PREVENÇÃO</a>
+                            <a href="#sintomas" class="nav-link px-3 py-2 text-sm font-semibold border-b-2 border-transparent" style="color: #152e3e;">SINTOMAS</a>
+                            <a href="#agenda" class="nav-link px-3 py-2 text-sm font-semibold border-b-2 border-transparent" style="color: #152e3e;">AGENDA</a>
+                            <a href="#conscientizacao" class="nav-link px-3 py-2 text-sm font-semibold border-b-2 border-transparent" style="color: #152e3e;">CONSCIENTIZAÇÃO</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- SEÇÃO 1: INÍCIO (DESIGN CENTRALIZADO COM LOGO PROEMINENTE) -->
+            <section id="inicio" class="bg-white" style="background-image: url('./assets/textura.png'); background-size: cover; background-position: center;">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-16 md:pt-4 md:pb-24 text-center">
+                    <div class="flex flex-col items-center justify-center">
+                        
+                        <!-- Logo da Campanha (Ajustada para Placeholder Azul) -->
+                        <img 
+                            src="https://placehold.co/500x300/152e3e/C7E1FF?text=NOVEMBRO+AZUL" 
+                            alt="Logo Novembro Azul ROIT" 
+                            class="w-auto h-72 md:h-96 lg:h-[28rem] mx-auto mb-[-16] object-contain" 
+                            onerror="this.onerror=null; this.src='placeholder.png'; this.outerHTML='<div class=\'poppins-bold text-6xl\' style=\'color: #152e3e; mb-6\'>AZUL</div>';"
+                        >
+                        
+                        <!-- Subtítulo centralizado atualizado -->
+                        <p class="poppins-regular mt-0 max-w-3xl mx-auto text-lg md:text-xl text-gray-600 leading-tight">
+                            Assim como um sistema precisa estar estável e atualizado para funcionar bem, nós também precisamos revisar e cuidar do que mantém nosso “código” em funcionamento: corpo, mente e hábitos.
+                            <br><br>
+                            A ROIT convida cada ROITER a olhar para si com o mesmo cuidado e precisão com que olha para um sistema complexo.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <!-- SEÇÃO 2: O QUE É -->
+            <section id="oquee" class="py-20 md:py-28" style="background-color: #169cdc;"> <!-- AZUL CLARO (#169cdc) -->
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="poppins-bold text-3xl md:text-4xl font-bold" style="color: #152e3e;">O que é o câncer de próstata e por que o diagnóstico precoce salva vidas</h2>
+                        <p class="poppins-regular mt-4 max-w-2xl mx-auto text-lg text-gray-800">Entenda os conceitos básicos e a estatística mais importante desta causa.</p>
+                    </div>
+                    <div class="grid md:grid-cols-5 gap-8 items-center">
+                        <div class="md:col-span-3">
+                            <h3 class="poppins-bold text-2xl font-semibold mb-4" style="color: #152e3e;">O básico sobre a doença</h3>
+                            <p class="poppins-regular text-gray-800 leading-relaxed">
+                                O câncer de próstata é o crescimento desordenado de células na próstata, uma glândula exclusiva do sexo masculino. Depois do câncer de pele, o câncer de próstata é o tumor maligno mais comum nos homens, representando cerca de 10% de todos os cânceres diagnosticados.
+                            </p>
+                            <p class="poppins-regular mt-4 text-gray-800 leading-relaxed">
+                                A boa notícia é que, quando diagnosticado precocemente, as chances de cura são muito altas! Faça seus exames de rotina, atualize seus dados de saúde e mantenha o código rodando bem.
+                            </p>
+                        </div>
+                        <div class="md:col-span-2 p-8 rounded-2xl shadow-2xl text-center" style="background-color: #152e3e;"> <!-- AZUL ESCURO (#152e3e) -->
+                            <p class="poppins-bold text-lg text-white">Chance de cura com diagnóstico precoce:</p>
+                            <div id="cure-rate" class="poppins-bold text-7xl md:text-8xl my-2 text-white">98%</div> <!-- Alterado para 98% -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 3: FATORES DE RISCO -->
+            <section id="prevencao" class="py-20 md:py-28 bg-white relative overflow-hidden">
+                <!-- IMAGEM DECORATIVA ESQUERDA: Círculo Azul (Placeholder) -->
+                <img 
+                    src="https://placehold.co/150x150/169cdc/ffffff?text=O" 
+                    alt="Círculo Azul Decorativo" 
+                    class="absolute top-1/4 left-0 w-48 h-48 md:w-1/4 lg:w-1/3 h-auto opacity-50 z-0 hidden sm:block" 
+                    style="transform: translateX(-50%);"
+                    onerror="this.style.display='none'"
+                >
+                <!-- IMAGEM DECORATIVA DIREITA: Círculo Azul (Placeholder) -->
+                <img 
+                    src="https://placehold.co/150x150/169cdc/ffffff?text=O" 
+                    alt="Círculo Azul Decorativo" 
+                    class="absolute bottom-1/4 right-0 w-48 h-48 md:w-1/4 lg:w-1/3 h-auto opacity-50 z-0 hidden sm:block" 
+                    style="transform: translateX(50%);"
+                    onerror="this.style.display='none'"
+                >
+
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="text-center mb-16">
+                        <!-- TÍTULO ATUALIZADO -->
+                        <h2 class="poppins-bold text-3xl md:text-4xl font-bold" style="color: #152e3e;">Conecte-se com a sua saúde: diminua os fatores de risco</h2>
+                           <!-- REMOVIDO: Conhecer os fatores de risco é importante, mas mais ainda é ter um estilo de vida saudável. -->
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <div class="p-8 rounded-2xl shadow-lg" style="background-color: #169cdc;"> <!-- AZUL CLARO (#169cdc) -->
+                            <div class="flex items-center space-x-3 mb-4">
+                                <span class="text-2xl" style="color: #f7f7f7;">🔎</span> <!-- Ajuste para #f7f7f7 -->
+                                <h3 class="poppins-bold text-2xl" style="color: #f7f7f7;">Fatores de risco</h3> <!-- AZUL ESCURO (#152e3e) -> #f7f7f7 -->
+                            </div>
+                            <!-- COR DA FONTE ALTERADA PARA #f7f7f7 -->
+                            <p class="poppins-regular mb-4 text-sm" style="color: #f7f7f7;">Lembre-se: ter um fator de risco não é uma sentença, mas um chamado para ter mais atenção e cuidado.</p>
+                            <ul class="poppins-regular space-y-3 list-disc list-inside" style="color: #f7f7f7;">
+                                <li><span class="font-bold">Idade:</span> A idade é o fator de risco mais significativo, com a maioria dos casos ocorrendo após os 50 anos.</li>
+                                <li><span class="font-bold">Histórico familiar:</span> Ter pai, irmão ou tio com câncer de próstata antes dos 60 anos aumenta o risco.</li>
+                                <li><span class="font-bold">Estilo de vida:</span> Obesidade, sedentarismo e uma dieta rica em gorduras também podem influenciar.</li>
+                            </ul>
+                        </div>
+                           <div class="p-8 rounded-2xl shadow-lg" style="background-color: #169cdc;"> <!-- AZUL CLARO (#169cdc) -->
+                            <div class="flex items-center space-x-3 mb-4">
+                                <span class="text-2xl" style="color: #f7f7f7;">🛡️</span> <!-- Ajuste para #f7f7f7 -->
+                                <!-- TÍTULO ATUALIZADO -->
+                                <h3 class="poppins-bold text-2xl" style="color: #f7f7f7;">Dicas para manter o sistema estável</h3> <!-- AZUL ESCURO (#152e3e) -> #f7f7f7 -->
+                            </div>
+                            
+                            <!-- COR DA FONTE ALTERADA PARA #f7f7f7 -->
+                            <ul class="poppins-regular space-y-3 list-disc list-inside" style="color: #f7f7f7;">
+                                <li>Adotar um estilo de vida ativo, priorizando exercícios físicos e uma alimentação rica e equilibrada.</li>
+                                <li>Manter uma alimentação saudável e equilibrada, com frutas, vegetais e grãos integrais.</li>
+                                <li>Evitar bebidas alcoólicas e não fumar.</li>
+                                <li>Manter o peso corporal adequado.</li>
+                                <li>Visitas regulares ao médico para exames de rotina, especialmente após os 40-50 anos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 4: PREVENÇÃO (PILAR CUIDADO) -->
+            <section id="deteccao" class="py-20 md:py-28" style="background-color: #152e3e;"> <!-- AZUL ESCURO (#152e3e) -->
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="poppins-bold text-3xl md:text-4xl font-bold text-white">O controle do câncer de próstata é baseado em dois pilares</h2>
+                        <!-- TEXTO REMOVIDO DAQUI -->
+                        <p class="poppins-regular mt-4 max-w-2xl mx-auto text-lg text-blue-100">Clique em cada pilar para saber mais.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                        <!-- Step 1 Card: Prevenção -->
+                        <div id="step1-card" class="step-card bg-white p-6 rounded-2xl shadow-lg cursor-pointer border-4 border-[#169cdc]" data-step="1"> <!-- AZUL CLARO (#169cdc) -->
+                            <div class="bg-[#169cdc] text-[#152e3e] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"> <!-- AZUL CLARO (#169cdc) e AZUL ESCURO (#152e3e) -->
+                               <span class="poppins-bold text-3xl">1</span>
+                            </div>
+                            <h3 class="poppins-bold text-xl text-gray-800">Prevenção</h3>
+                            <!-- TEXTO DO CARD ATUALIZADO -->
+                            <p class="poppins-regular text-gray-500 mt-1">Revisar antes que dê erro</p>
+                        </div>
+                        <!-- Step 2 Card: Detecção Precoce -->
+                        <div id="step2-card" class="step-card bg-white p-6 rounded-2xl shadow-lg cursor-pointer border-4 border-[#169cdc]" data-step="2"> <!-- AZUL CLARO (#169cdc) -->
+                            <div class="bg-[#169cdc] text-[#152e3e] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"> <!-- AZUL CLARO (#169cdc) e AZUL ESCURO (#152e3e) -->
+                               <span class="poppins-bold text-3xl">2</span>
+                            </div>
+                            <h3 class="poppins-bold text-xl text-gray-800">Detecção precoce</h3>
+                            <p class="poppins-regular text-gray-500 mt-1">Exames regulares e acompanhamento médico</p>
+                        </div>
+                    </div>
+
+                    <!-- Content Display Area -->
+                    <div id="step-content" class="mt-12 bg-white p-8 rounded-2xl shadow-inner min-h-[250px]">
+                        <!-- Step 1 Content: Prevenção (Atualizado com o novo texto de hábitos) -->
+                        <div id="step1-content" class="step-details hidden">
+                            <!-- TÍTULO DO CONTEÚDO ATUALIZADO -->
+                            <h4 class="poppins-bold text-2xl mb-4" style="color: #152e3e;">Prevenção: Otimizando o seu código de vida</h4> <!-- AZUL ESCURO (#152e3e) -->
+                            <p class="poppins-regular mb-4" style="color: #152e3e;">
+                                A prevenção primária foca em garantir que o sistema operacional do seu corpo rode com a máxima eficiência. Para isso, a chave está na estabilidade dos seus hábitos:
+                            </p>
+                            <p class="poppins-regular mb-4" style="color: #152e3e;">
+                                Já está comprovado que uma dieta rica em frutas, verduras, legumes, grãos e cereais integrais, e com menos gordura, principalmente as de origem animal, ajuda a diminuir o risco de câncer, como também de outras doenças crônicas não-transmissíveis.
+                            </p>
+                            <p class="poppins-regular" style="color: #152e3e;">
+                                Nesse sentido, outros hábitos saudáveis também são recomendados, como fazer, no mínimo, 30 minutos diários de atividade física, manter o peso adequado à altura, diminuir o consumo de álcool e não fumar.
+                            </p>
+                            <p class="poppins-regular mt-4" style="color: #152e3e;"><span class="font-bold">🚀 Estabilidade e Performance: Seu código de vida merece atenção contínua.</span></p>
+                        </div>
+                         <!-- Step 2 Content: Detecção Precoce (Texto PSA revisado) -->
+                        <div id="step2-content" class="step-details hidden">
+                            <h4 class="poppins-bold text-2xl mb-4" style="color: #152e3e;">Detecção precoce</h4> <!-- AZUL ESCURO (#152e3e) -->
+                            <p class="poppins-regular mb-4" style="color: #152e3e;">A detecção precoce é fundamental para o sucesso do tratamento e se baseia em dois principais exames:</p>
+                            <div class="space-y-4 mt-6">
+                                <h5 class="poppins-regular text-xl font-semibold text-gray-800"><span class="font-bold">Exame de PSA</span> (Antígeno Prostático Específico):</h5>
+                                <p class="poppins-regular" style="color: #152e3e;">Um exame de sangue simples que mede os níveis de uma proteína produzida pela próstata.</p> 
+                                <h5 class="poppins-regular text-xl font-semibold text-gray-800"><span class="font-bold">Exame de toque retal</span>:</h5>
+                                <p class="poppins-regular" style="color: #152e3e;">É um exame rápido e essencial, onde o médico avalia a próstata para identificar alterações de tamanho ou consistência. Apesar de tabu, é indolor e muito eficaz. A recomendação geral é iniciar os exames de rotina a partir dos <span class="font-bold">50 anos</span>, ou <span class="font-bold">45 anos</span> para homens com histórico familiar ou fatores de risco. Converse com seu médico para a periodicidade ideal.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOTÃO ATUALIZADO (Maior e novo texto) -->
+                    <div class="text-center mt-12">
+                        <a href="checkup_checklist.md" target="_blank" class="poppins-bold inline-block text-center py-5 px-10 text-lg rounded-full shadow-xl transition duration-300 transform hover:scale-105" style="background-color: #169cdc; color: #152e3e;">
+                            Acesse aqui o Checkup Geral para Integridade do Sistema
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SEÇÃO 5: SINTOMAS -->
+            <section id="sintomas" class="py-20 md:py-28 bg-white">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="poppins-bold text-3xl md:text-4xl font-bold" style="color: #152e3e;">Sintomas para ficar atento!</h2>
+                           <!-- SUBTÍTULO ATUALIZADO -->
+                           <p class="poppins-regular mt-4 max-w-2xl mx-auto text-lg text-gray-600">Na fase inicial, o câncer de próstata pode não apresentar sintomas e, quando apresenta, os mais comuns são:</p>
+                    </div>
+                    
+                    <!-- LAYOUT DE CARD ÚNICO ATUALIZADO -->
+                    <div class="flex justify-center">
+                        <div class="p-8 rounded-2xl shadow-lg w-full max-w-3xl" style="background-color: #169cdc;"> <!-- AZUL CLARO (#169cdc) -->
+                            <div class="flex items-center space-x-3 mb-4">
+                                <span class="text-3xl" style="color: #f7f7f7;">🚨</span>
+                                <h3 class="poppins-bold text-2xl" style="color: #f7f7f7;">Sinais de alerta</h3> <!-- COR ATUALIZADA PARA #f7f7f7 -->
+                            </div>
+                            <ul class="poppins-regular space-y-3 list-disc list-inside" style="color: #f7f7f7;"> <!-- COR ATUALIZADA PARA #f7f7f7 -->
+                                <!-- LISTA DE SINTOMAS ATUALIZADA E CAPITALIZADA -->
+                                <li>Dificuldade de urinar;</li>
+                                <li>Demora em começar e terminar de urinar;</li>
+                                <li>Sangue na urina;</li>
+                                <li>Diminuição do jato de urina;</li>
+                                <li>Necessidade de urinar mais vezes durante o dia ou à noite.</li>
+                            </ul>
+                            <!-- PARÁGRAFO FINAL ADICIONADO -->
+                            <p class="poppins-regular mt-6 font-semibold" style="color: #f7f7f7;"> <!-- COR ATUALIZADA PARA #f7f7f7 -->
+                                Se você tiver algum desses sintomas, procure uma unidade de saúde e faça os exames necessários com médico especialista de sua confiança.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagem (Mantida, mas pode ser removida se preferir) -->
+                    <div class="flex justify-center mt-12">
+                        <img 
+                            src="https://placehold.co/600x300/152e3e/C7E1FF?text=IMAGEM+CONSCIENTIZACAO+AZUL" 
+                            alt="Imagem didática dos sintomas (masculina)" 
+                            class="max-w-full h-auto rounded-lg shadow-md md:max-w-2xl"
+                            onerror="this.style.display='none'"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 6: AGENDA DE EVENTOS (Carrossel) -->
+            <section id="agenda" class="py-20 md:py-28 relative overflow-hidden" style="background-color: #152e3e;"> <!-- AZUL ESCURO (#152e3e) -->
+                
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="text-center mb-12">
+                        <h2 class="poppins-bold text-3xl md:text-4xl font-bold text-white">Salve na sua agenda</h2>
+                        <p class="poppins-regular mt-4 max-w-2xl mx-auto text-lg text-blue-100">
+                           Participe dos eventos especiais:
+                           <br>
+                           <span class="font-bold text-lg">Participe e atualize o seu sistema de saúde</span>
+                        </p>
+                    </div>
+
+                    <!-- Carrossel (Carousel) Container -->
+                    <div id="event-carousel-container" class="relative overflow-x-hidden">
+                        <div id="event-carousel" class="flex transition-transform duration-500 ease-in-out">
+                            
+                            <!-- CARD 1: 10/11 - Saúde do Homem em Foco (Wellhub) -->
+                            <div class="event-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                                <div class="bg-white p-6 rounded-2xl shadow-xl h-full flex flex-col justify-between">
+                                    <div>
+                                        <p class="poppins-regular text-xl font-semibold" style="color: #152e3e;">🗓️ 10/11 às 14h</p> <!-- AZUL ESCURO -->
+                                        <h3 class="poppins-bold text-xl mt-2 mb-3" style="color: #152e3e;">Saúde do Homem em Foco: Além da Prevenção: Qualidade de Vida</h3> <!-- AZUL ESCURO -->
+                                        <p class="poppins-regular text-gray-700 text-sm leading-relaxed">Com uma fala inspiradora, a palestra conecta o Novembro Azul à importância da prevenção do câncer de próstata e amplia a discussão para uma visão integral da saúde masculina. Serão abordados exercícios físicos, alimentação, saúde mental e autocuidado, ressaltando o impacto direto na produtividade e no bem-estar. Também serão apresentados dados sobre a prevenção de problemas de próstata por meio do treinamento físico, com incentivo à realização de check-ups regulares e à quebra de tabus sobre procurar médicos, trazendo dicas práticas e aplicáveis ao dia a dia.</p>
+                                        <p class="poppins-regular text-xs text-gray-500 mt-2">Evento Wellhub</p>
+                                    </div>
+                                    <a href="https://promo.gympass.com/br/calendarioexclusivo/clkn/https/www.addevent.com/event/kz26731814?ajs_aid=7365c9a8-ab64-4d3e-a5d8-6d79f9149f05&fbp=fb.2.1760549941973.5694743280" target="_blank" class="poppins-bold mt-4 inline-block text-center py-2 px-4 rounded-full text-white shadow-lg transition duration-200" style="background-color: #152e3e;"> <!-- AZUL ESCURO -->
+                                        Participe!
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- CARD 2: 17/11 - Movimento é Saúde (Wellhub) -->
+                            <div class="event-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                                <div class="bg-white p-6 rounded-2xl shadow-xl h-full flex flex-col justify-between">
+                                    <div>
+                                        <p class="poppins-regular text-xl font-semibold" style="color: #152e3e;">🗓️ 17/11 às 11h</p> <!-- AZUL ESCURO -->
+                                        <h3 class="poppins-bold text-xl mt-2 mb-3" style="color: #152e3e;">Movimento é Saúde: como a atividade física previne doenças e fortalece o corpo e a mente</h3> <!-- AZUL ESCURO -->
+                                        <p class="poppins-regular text-gray-700 text-sm leading-relaxed">Com uma fala dinâmica e motivadora, Vinicius Kitahara destaca a importância da atividade física na prevenção de doenças crônicas, inclusive o câncer. Ele mostra como o exercício contribui para a saúde mental e o controle do estresse, além de trazer dicas simples para incluir movimento em rotinas intensas. Especialista em felicidade corporativa e no tripé da saúde — física, mental e social — Vinicius inspira mudanças reais, incentivando a quebra do sedentarismo com exemplos práticos e fáceis de aplicar no dia a dia.</p>
+                                        <p class="poppins-regular text-xs text-gray-500 mt-2">Evento Wellhub</p>
+                                    </div>
+                                    <a href="https://www.addevent.com/event/AU26718345?ajs_aid=7365c9a8-ab64-4d3e-a5d8-6d79f9149f05&fbp=fb.2.1760549941973.5694743280" target="_blank" class="poppins-bold mt-4 inline-block text-center py-2 px-4 rounded-full text-white shadow-lg transition duration-200" style="background-color: #152e3e;"> <!-- AZUL ESCURO -->
+                                        Participe!
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- CARD 3: 18/11 - Palestra Unimed (Horário adicionado) -->
+                            <div class="event-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                                <div class="bg-white p-6 rounded-2xl shadow-xl h-full flex flex-col justify-between">
+                                    <div>
+                                        <p class="poppins-regular text-xl font-semibold" style="color: #152e3e;">🗓️ 18/11 às 13:30</p> <!-- HORÁRIO ADICIONADO -->
+                                        <h3 class="poppins-bold text-xl mt-2 mb-3" style="color: #152e3e;">Palestra Unimed | Câncer de mama e próstata: o que eu preciso saber?</h3> <!-- AZUL ESCURO -->
+                                        <p class="poppins-regular text-gray-700 text-sm leading-relaxed">Este ano, unificamos nossa palestra de saúde para que todos nós tenhamos uma visão completa! A informação que salva é para todos os ROITERS! 💙💖</p>
+                                        <p class="poppins-regular text-xs text-gray-500 mt-2">Todos estão convidados! Contamos com a sua participação!</p>
+                                    </div>
+                                    <a href="https://meet.google.com/zix-xhwn-nbd" target="_blank" class="poppins-bold mt-4 inline-block text-center py-2 px-4 rounded-full text-white shadow-lg transition duration-200" style="background-color: #152e3e;"> <!-- AZUL ESCURO -->
+                                        Participe!
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- CARD 4: 28/11 - Happy Hour dos Guris (Título e Horário alterados) -->
+                            <div class="event-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                                <div class="bg-white p-6 rounded-2xl shadow-xl h-full flex flex-col justify-between">
+                                    <div>
+                                        <p class="poppins-regular text-xl font-semibold" style="color: #152e3e;">🗓️ 28/11 às 17:30</p> <!-- HORÁRIO ADICIONADO -->
+                                        <h3 class="poppins-bold text-xl mt-2 mb-3" style="color: #152e3e;">Happy Hour dos Guris</h3> <!-- TÍTULO SIMPLIFICADO -->
+                                        <p class="poppins-bold text-sm text-gray-700">Conexão e conversa sem manual</p> <!-- SUBTÍTULO EM NEGRITO -->
+                                        <p class="poppins-regular text-gray-700 text-sm leading-relaxed mt-2">Convidamos todos os guris, rapazes, cabras, manos, boys e piás (Seja qual for a expressão da sua região) para o nosso Happy Hour dos Guris!</p>
+                                        <p class="poppins-regular text-gray-700 text-sm leading-relaxed mt-2">Um momento para relaxar, fortalecer a conexão do time e trocar uma ideia sobre a importância de cuidar da saúde como um todo. E o melhor: valendo um vale-compras de R$ 100,00!</p>
+                                        <p class="poppins-regular text-xs text-gray-500 mt-2">Esperamos vocês! 💙</p>
+                                    </div>
+                                    <a href="https://meet.google.com/zfm-dvbf-opv" target="_blank" class="poppins-bold mt-4 inline-block text-center py-2 px-4 rounded-full text-white shadow-lg transition duration-200" style="background-color: #152e3e;"> <!-- AZUL ESCURO -->
+                                        Participe!
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- Botões de Navegação (Mudar hover para bg-blue-50) -->
+                        <button id="prev-btn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg text-gray-800 hover:bg-blue-50 transition duration-200 focus:outline-none hidden md:block" style="margin-left: -20px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button id="next-btn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg text-gray-800 hover:bg-blue-50 transition duration-200 focus:outline-none hidden md:block" style="margin-right: -20px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SEÇÃO 7: CONSCIENTIZAÇÃO -->
+            <section id="conscientizacao" class="py-20 md:py-28 bg-white">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid md:grid-cols-2 gap-10 items-start">
+                        <!-- Coluna 1: Imagem (Substituída por Placeholder) -->
+                        <div class="flex justify-center md:justify-start items-start">
+                            <img 
+                                src="https://placehold.co/400x500/152e3e/C7E1FF?text=PARE%5CnPENSE%5nCUIDE" 
+                                alt="Pare, Pense e Cuide" 
+                                class="h-auto w-full max-w-xs md:max-w-md rounded-lg shadow-xl object-contain"
+                                onerror="this.onerror=null; this.src='placeholder.png'; this.outerHTML='<div class=\'poppins-bold text-4xl\' style=\'color: #152e3e;\'>PARE</div>';"
+                            >
+                        </div>
+                        
+                        <!-- Coluna 2: Texto (Cores e textos ajustados) -->
+                        <div class="text-center md:text-left">
+                            <h2 class="poppins-bold text-3xl md:text-4xl font-bold mb-6" style="color: #152e3e;"> <!-- AZUL ESCURO (#152e3e) -->
+                                O conhecimento é o seu maior aliado! 💙
+                            </h2>
+                            
+                            <div class="p-6 rounded-xl shadow-lg" style="background-color: #169cdc;"> <!-- AZUL CLARO (#169cdc) -->
+                                <p class="poppins-regular mt-4 text-lg text-gray-800 leading-relaxed">
+                                    <span class="font-bold">Esta jornada do Novembro Azul é para todos! O cuidado começa com a informação e com a consciência de que a prevenção é um processo contínuo e fundamental.</span> 
+                                    <br><br>
+                                    É importante que os homens priorizem o autocuidado e agendem seus exames. 
+                                    <br><br>
+                                    E para as mulheres: o apoio, o incentivo e o lembrete carinhoso são ações poderosas. 
+                                    <br><br>
+                                    <span class="font-bold">O conhecimento é para todos nós!</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+
+        <!-- RODAPÉ -->
+        <footer class="bg-gray-800 text-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-sm">
+                <p class="poppins-regular">&copy; ROIT. Campanha de Conscientização Novembro Azul.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- SCRIPT CORRIGIDO: Lógica dos Pilares Interativos e Carrossel (Unificados no mesmo bloco DOMContentLoaded) -->
+    <script>
+    (function(){
+    document.addEventListener('DOMContentLoaded', () => {
+        // Lógica dos Pilares Interativos (2 Pilares)
+        const stepCards = document.querySelectorAll('.step-card');
+        const stepContents = document.querySelectorAll('.step-details');
+        const contentBox = document.getElementById("step-content");
+
+        // Função principal para mostrar o passo
+        function showStep(stepNumber) {
+            stepContents.forEach(content => content.classList.add('hidden'));
+            
+            // 1. REMOVE o destaque de TODOS os cards
+            stepCards.forEach(card => card.classList.remove('is-selected')); 
+            
+            const contentToShow = document.getElementById(`step${stepNumber}-content`);
+            const cardToHighlight = document.getElementById(`step${stepNumber}-card`);
+            
+            if (contentToShow && cardToHighlight) {
+                // 2. MOSTRA o conteúdo do pilar correto
+                contentToShow.classList.remove('hidden');
+                
+                // 3. ADICIONA o destaque (is-selected) APENAS no card correto
+                cardToHighlight.classList.add('is-selected'); 
+
+                // Anima a área de conteúdo (leve fade-in)
+                contentBox.style.opacity = "0";
+                setTimeout(() => {
+                    contentBox.style.opacity = "1";
+                    contentBox.style.transition = "opacity 0.4s ease";
+                }, 100);
+            }
+        }
+
+        // Configura o estado inicial (garante que o Card 1 e conteúdo 1 estejam visíveis)
+        showStep(1);
+
+
+        stepCards.forEach((card) => {
+            card.addEventListener("click", () => {
+                const step = card.dataset.step;
+                showStep(step);
+            });
+        });
+
+        // Lógica do Carrossel de Eventos (Mantida)
+        if (window.__roiterCarouselInterval) {
+        clearInterval(window.__roiterCarouselInterval);
+        window.__roiterCarouselInterval = null;
+        }
+
+        const carousel = document.getElementById('event-carousel');
+        const container = document.getElementById('event-carousel-container');
+        if (!carousel || !container) return;
+
+        let cards = Array.from(carousel.querySelectorAll('.event-card'));
+        if (cards.length === 0) return;
+
+        // melhorar performance de transformações
+        carousel.style.willChange = 'transform';
+
+        let currentIndex = 0;
+        const intervalMs = 3500;
+        let autoInterval = null;
+        let isPaused = false;
+
+        function getCardWidth() {
+        // usamos getBoundingClientRect para incluir paddings reais
+        const first = cards[0].getBoundingClientRect();
+        return Math.round(first.width);
+        }
+
+        function getCardsPerView() {
+        if (window.innerWidth >= 1024) return 3;
+        if (window.innerWidth >= 768) return 2;
+        return 1;
+        }
+
+        function maxIndex() {
+        return Math.max(0, cards.length - getCardsPerView());
+        }
+
+        function goToIndex(idx, animate = true) {
+        // garante índices válidos
+        const max = maxIndex();
+        if (idx < 0) idx = 0;
+        if (idx > max) idx = max;
+
+        currentIndex = idx;
+        const w = getCardWidth();
+        // usa translate3d para melhor performance
+        if (!animate) carousel.style.transition = 'none';
+        else carousel.style.transition = 'transform 0.5s ease';
+
+        carousel.style.transform = `translate3d(-${currentIndex * w}px, 0, 0)`;
+        // força reflow rápido antes de reativar transição (apenas se tiramos)
+        if (!animate) void carousel.offsetWidth;
+        if (!animate) carousel.style.transition = '';
+        updateButtonsState();
+        }
+
+        // pausar/retomar autoplay
+        function startAuto() {
+        stopAuto();
+        autoInterval = setInterval(() => {
+            if (!isPaused) {
+            const nxt = currentIndex + 1;
+            if (nxt > maxIndex()) {
+                goToIndex(0);
+            } else {
+                goToIndex(nxt);
+            }
+            }
+        }, intervalMs);
+        // also expose globally to be able to clear from dev console if needed
+        window.__roiterCarouselInterval = autoInterval;
+        }
+
+        function stopAuto() {
+        if (autoInterval) {
+            clearInterval(autoInterval);
+            autoInterval = null;
+        }
+        }
+
+        // Hide/disable prev/next buttons if present (mantém compatibilidade)
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        function updateButtonsState() {
+        if (!prevBtn || !nextBtn) return;
+        const max = maxIndex();
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= max;
+        prevBtn.style.opacity = prevBtn.disabled ? '0.5' : '1';
+        nextBtn.style.opacity = nextBtn.disabled ? '0.5' : '1';
+        }
+
+        if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            goToIndex(currentIndex - 1);
+        });
+        nextBtn.addEventListener('click', () => {
+            goToIndex(currentIndex + 1);
+        });
+        }
+
+        // pausa ao focar/interagir
+        container.addEventListener('mouseenter', () => { isPaused = true; });
+        container.addEventListener('mouseleave', () => { isPaused = false; });
+
+        // suporte tocável (swipe básico)
+        let startX = 0, deltaX = 0, isTouching = false;
+        container.addEventListener('touchstart', (e) => {
+        stopAuto();
+        isTouching = true;
+        startX = e.touches[0].clientX;
+        }, {passive:true});
+        container.addEventListener('touchmove', (e) => {
+        if (!isTouching) return;
+        deltaX = e.touches[0].clientX - startX;
+        // mover temporariamente (sem commit)
+        carousel.style.transition = 'none';
+        carousel.style.transform = `translate3d(-${currentIndex * getCardWidth() - deltaX}px,0,0)`;
+        }, {passive:true});
+        container.addEventListener('touchend', () => {
+        if (!isTouching) return;
+        isTouching = false;
+        const threshold = getCardWidth() * 0.25;
+        if (Math.abs(deltaX) > threshold) {
+            if (deltaX > 0) goToIndex(currentIndex - 1);
+            else goToIndex(currentIndex + 1);
+        } else {
+            goToIndex(currentIndex); // retorna pro estado
+        }
+        deltaX = 0;
+        startAuto();
+        });
+
+        // Recalcula na mudança de viewport
+        let resizeTimer = null;
+        window.addEventListener('resize', () => {
+        // atualiza referência de cards (se layout mudar)
+        if (resizeTimer) clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            cards = Array.from(carousel.querySelectorAll('.event-card'));
+            // mantém currentIndex válido
+            if (currentIndex > maxIndex()) currentIndex = maxIndex();
+            goToIndex(currentIndex, false);
+        }, 150);
+        });
+
+        // Inicializa a largura do container interno (opcional)
+        // apenas garantimos o posicionamento inicial sem animação:
+        goToIndex(0, false);
+        startAuto();
+
+        // expõe funções para debug (opcional)
+        window.__roiterCarousel = { goToIndex, startAuto, stopAuto };
+    });
+    })();
+    </script>
+    <script>
+    // Animação da taxa de cura (Mantida)
+    (function () {
+    function initCureRate() {
+        const el = document.getElementById('cure-rate');
+        if (!el) return;
+
+        if (el.dataset.animated === 'true') return;
+
+        const target = 98; // Alterado para 98%
+        const duration = 2000; // ms
+        let startTime = null;
+
+        function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const elapsed = timestamp - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const value = Math.floor(progress * target);
+        el.textContent = `${value}%`;
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        } else {
+            el.textContent = `${target}%`;
+            el.dataset.animated = 'true';
+        }
+        }
+
+        const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            requestAnimationFrame(step);
+            obs.disconnect();
+            }
+        });
+        }, { threshold: 0.6 });
+
+        observer.observe(el);
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCureRate);
+    } else {
+        initCureRate();
+    }
+    })();
+    </script>
+
+</body>
+</html>
