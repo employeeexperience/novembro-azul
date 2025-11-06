@@ -715,6 +715,30 @@
     }
     })();
     </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".step-card");
+    const contents = document.querySelectorAll(".step-details");
+
+    cards.forEach((card) => {
+        card.addEventListener("click", function () {
+            // remove seleção anterior
+            cards.forEach(c => c.classList.remove("is-selected"));
+            contents.forEach(content => content.classList.add("hidden"));
+
+            // adiciona seleção no card clicado
+            this.classList.add("is-selected");
+
+            // mostra o conteúdo correspondente (usando o data-step corretamente)
+            const step = this.getAttribute("data-step");
+            document.getElementById(`step${step}-content`).classList.remove("hidden");
+        });
+    });
+
+    // opcional: inicia com o card 1 ativo
+    cards[0].click();
+});
+</script>
 
 </body>
 </html>
