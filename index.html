@@ -63,6 +63,10 @@
             border-color: #152e3e !important; /* Borda Azul Escura */
             box-shadow: 0 10px 15px -3px rgba(21, 46, 62, 0.3), 0 4px 6px -4px rgba(21, 46, 62, 0.1) !important;
         }
+        /* Garantindo que o pilar desativado tenha a borda azul clara */
+        .step-card:not(.is-selected) {
+             border-color: #169cdc !important;
+        }
     </style>
 </head>
 <body class="bg-blue-50 text-gray-800">
@@ -73,12 +77,12 @@
             <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-20">
                     <div class="flex-shrink-0 flex items-center">
-                        <!-- Logo ROIT -->
+                        <!-- Logo ROIT (Ajustando src para nome com espaço) -->
                         <img 
-                            src="https://placehold.co/150x40/152e3e/ffffff?text=Logo+ROIT" 
+                            src="./assets/Logo%20ROIT%20mono%20positiva.png" 
                             alt="Logo ROIT" 
                             class="h-10 w-auto"
-                            onerror="this.onerror=null; this.src='placeholder.png'; this.outerHTML='<div class=\'poppins-bold text-3xl\' style=\'color: #152e3e; line-height: 1;\'>ROIT</div>';"
+                            onerror="this.onerror=null; this.src='https://placehold.co/150x40/152e3e/ffffff?text=Logo+ROIT'; this.outerHTML='<div class=\'poppins-bold text-3xl\' style=\'color: #152e3e; line-height: 1;\'>ROIT</div>';"
                         >
                     </div>
                     <div class="hidden md:block">
@@ -103,12 +107,12 @@
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-16 md:pt-4 md:pb-24 text-center">
                     <div class="flex flex-col items-center justify-center">
                         
-                        <!-- Logo da Campanha (Ajustada para Placeholder Azul) -->
+                        <!-- Logo da Campanha (Ajustando src para nome com espaço) -->
                         <img 
-                            src="https://placehold.co/500x300/152e3e/C7E1FF?text=NOVEMBRO+AZUL" 
+                            src="./assets/logo-campanha-novembro-azul.png" 
                             alt="Logo Novembro Azul ROIT" 
                             class="w-auto h-72 md:h-96 lg:h-[28rem] mx-auto mb-[-16] object-contain" 
-                            onerror="this.onerror=null; this.src='placeholder.png'; this.outerHTML='<div class=\'poppins-bold text-6xl\' style=\'color: #152e3e; mb-6\'>AZUL</div>';"
+                            onerror="this.onerror=null; this.src='https://placehold.co/500x300/152e3e/C7E1FF?text=NOVEMBRO+AZUL';"
                         >
                         
                         <!-- Subtítulo centralizado atualizado -->
@@ -151,17 +155,17 @@
 
             <!-- SEÇÃO 3: FATORES DE RISCO -->
             <section id="prevencao" class="py-20 md:py-28 bg-white relative overflow-hidden">
-                <!-- IMAGEM DECORATIVA ESQUERDA: Círculo Azul (Placeholder) -->
+                <!-- IMAGEM DECORATIVA ESQUERDA: Círculo Azul (Ajustando src para nome com espaço) -->
                 <img 
-                    src="https://placehold.co/150x150/169cdc/ffffff?text=O" 
+                    src="./assets/circulo-azul.png" 
                     alt="Círculo Azul Decorativo" 
                     class="absolute top-1/4 left-0 w-48 h-48 md:w-1/4 lg:w-1/3 h-auto opacity-50 z-0 hidden sm:block" 
                     style="transform: translateX(-50%);"
                     onerror="this.style.display='none'"
                 >
-                <!-- IMAGEM DECORATIVA DIREITA: Círculo Azul (Placeholder) -->
+                <!-- IMAGEM DECORATIVA DIREITA: Círculo Azul (Ajustando src para nome com espaço) -->
                 <img 
-                    src="https://placehold.co/150x150/169cdc/ffffff?text=O" 
+                    src="./assets/circulo-azul.png" 
                     alt="Círculo Azul Decorativo" 
                     class="absolute bottom-1/4 right-0 w-48 h-48 md:w-1/4 lg:w-1/3 h-auto opacity-50 z-0 hidden sm:block" 
                     style="transform: translateX(50%);"
@@ -497,6 +501,7 @@
         }
 
         // Configura o estado inicial (garante que o Card 1 e conteúdo 1 estejam visíveis)
+        // Isso garante que o Conteúdo 1 e o Destaque 1 estejam ativos ao carregar
         showStep(1);
 
 
