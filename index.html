@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novembro Azul ROIT</title>
     
-    <!-- Chosen Palette: Azul Corporativo (Baseado nas cores ROIT e Novembro Azul) -->
-    <!-- Cores: Azul Escuro (#152e3e) e Azul Claro (#169cdc) --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chosen Palette: Azul Corporativo (Baseado nas cores ROIT e Novembro Azul) --><script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
         
@@ -109,7 +108,7 @@
                             onerror="this.onerror=null; this.src='https://placehold.co/500x300/152e3e/C7E1FF?text=NOVEMBRO+AZUL';"
                         >
                         
-                        <!-- Subtítulo centralizado atualizado --><p class="poppins-regular mt-0 max-w-3xl mx-auto text-lg md:text-xl text-gray-600 leading-tight">
+                        <!-- Subtítulo centralizado atualizado (COR DO TEXTO ALTERADA) --><p class="poppins-regular mt-0 max-w-3xl mx-auto text-lg md:text-xl leading-tight" style="color: #f7f7f7;">
                             Assim como um sistema precisa estar estável e atualizado para funcionar bem, nós também precisamos revisar e cuidar do que mantém nosso “código” em funcionamento: corpo, mente e hábitos.
                             <br><br>
                             A ROIT convida cada ROITER a olhar para si com o mesmo cuidado e precisão com que olha para um sistema complexo.
@@ -124,15 +123,15 @@
             <!-- SEÇÃO 2: O QUE É --><section id="oquee" class="py-20 md:py-28" style="background-color: #169cdc;"> <!-- AZUL CLARO (#169cdc) --><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-16">
                         <h2 class="poppins-bold text-3xl md:text-4xl font-bold" style="color: #f7f7f7;">O que é o câncer de próstata e por que o diagnóstico precoce salva vidas</h2>
-                        <p class="poppins-regular mt-4 max-w-2xl mx-auto text-lg text-gray-800">Entenda os conceitos básicos e a estatística mais importante desta causa.</p>
+                        <!-- COR DO TEXTO ALTERADA --><p class="poppins-regular mt-4 max-w-2xl mx-auto text-lg" style="color: #f7f7f7;">Entenda os conceitos básicos e a estatística mais importante desta causa.</p>
                     </div>
                     <div class="grid md:grid-cols-5 gap-8 items-center">
                         <div class="md:col-span-3">
                             <h3 class="poppins-bold text-2xl font-semibold mb-4" style="color: #f7f7f7;">O básico sobre a doença</h3>
-                            <p class="poppins-regular text-gray-800 leading-relaxed">
+                            <!-- COR DO TEXTO ALTERADA --><p class="poppins-regular leading-relaxed" style="color: #f7f7f7;">
                                 O câncer de próstata é o crescimento desordenado de células na próstata, uma glândula exclusiva do sexo masculino. Depois do câncer de pele, o câncer de próstata é o tumor maligno mais comum nos homens, representando cerca de 10% de todos os cânceres diagnosticados.
                             </p>
-                            <p class="poppins-regular mt-4 text-gray-800 leading-relaxed">
+                            <!-- COR DO TEXTO ALTERADA --><p class="poppins-regular mt-4 leading-relaxed" style="color: #f7f7f7;">
                                 A boa notícia é que, quando diagnosticado precocemente, as chances de cura são muito altas! Faça seus exames de rotina, atualize seus dados de saúde e mantenha o código rodando bem.
                             </p>
                         </div>
@@ -143,12 +142,18 @@
             </section>
 
             <!-- SEÇÃO 3: FATORES DE RISCO --><section id="prevencao" class="py-20 md:py-28 bg-white relative overflow-hidden">
-            
-                <!-- IMAGEM DECORATIVA DIREITA: Círculo Azul (TAMANHO DOBRADO) --><img 
+                <!-- IMAGEM DECORATIVA ESQUERDA: Círculo Azul (TAMANHO AJUSTADO) --><img 
                     src="./assets/circulo-azul.png" 
                     alt="Círculo Azul Decorativo" 
-                    class="absolute bottom-0 right-0 w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 h-auto opacity-100 z-0 hidden sm:block" 
-                    style="transform: translateX(0);"
+                    class="absolute top-1/4 left-0 w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 h-auto opacity-50 z-0 hidden sm:block" 
+                    style="transform: translateX(-50%);"
+                    onerror="this.style.display='none'"
+                >
+                <!-- IMAGEM DECORATIVA DIREITA: Círculo Azul (TAMANHO AJUSTADO) --><img 
+                    src="./assets/circulo-azul.png" 
+                    alt="Círculo Azul Decorativo" 
+                    class="absolute bottom-1/4 right-0 w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 h-auto opacity-50 z-0 hidden sm:block" 
+                    style="transform: translateX(50%);"
                     onerror="this.style.display='none'"
                 >
 
@@ -224,10 +229,8 @@
                         </div>
                     </div>
 
-                    <!-- BOTÃO ATUALIZADO (Maior e novo texto) --><div class="text-center mt-12">
-                        <a href="checkup_checklist.md" target="_blank" class="poppins-bold inline-block text-center py-5 px-10 text-lg rounded-full shadow-xl transition duration-300 transform hover:scale-105" style="background-color: #169cdc; color: #152e3e;">
-                            Acesse aqui o Checkup Geral para Integridade do Sistema
-                        </a>
+                    <!-- BOTÃO DO CHECKLIST REMOVIDO TEMPORARIAMENTE --><div class="text-center mt-12">
+                        <!-- Removido o botão e a mensagem "O Checkup Geral estará disponível em breve!" --><p class="poppins-regular text-gray-600"><!-- Espaço reservado para o botão do checklist --></p>
                     </div>
                 </div>
             </section>
@@ -254,13 +257,15 @@
                         </div>
                     </div>
                     
-                    <!-- Imagem (Mantida, mas pode ser removida se preferir) --><div class="flex justify-center mt-12">
+                    <!-- IMAGEM REMOVIDA DAQUI --><!-- <div class="flex justify-center mt-12">
                         <img 
                             src="https://placehold.co/600x300/152e3e/C7E1FF?text=IMAGEM+CONSCIENTIZACAO+AZUL" 
                             alt="Imagem didática dos sintomas (masculina)" 
                             class="max-w-full h-auto rounded-lg shadow-md md:max-w-2xl"
                             onerror="this.style.display='none'"
                         />
+                    </div> --><div class="flex justify-center mt-12">
+                        <p class="poppins-regular text-gray-600"><!-- Espaço reservado para a imagem de sintomas --></p>
                     </div>
                 </div>
             </section>
@@ -269,8 +274,7 @@
                     <div class="text-center mb-12">
                         <h2 class="poppins-bold text-3xl md:text-4xl font-bold text-white">Salve na sua agenda</h2>
                         <p class="poppins-regular mt-4 max-w-2xl mx-auto text-lg text-blue-100">
-                           Participe dos eventos especiais:
-                           <br>
+                           <!-- REMOVIDO: Participe dos eventos especiais: --><br>
                            <span class="font-bold text-lg">Participe e atualize o seu sistema de saúde</span>
                         </p>
                     </div>
@@ -292,7 +296,7 @@
                             <!-- CARD 2: 17/11 - Movimento é Saúde (Wellhub) --><div class="event-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
                                 <div class="bg-white p-6 rounded-2xl shadow-xl h-full flex flex-col justify-between">
                                     <div>
-                                        <p class="poppins-regular text-xl font-semibold" style="color: #152e3e;">🗓️ 17/11 às 11h</p> <!-- AZUL ESCURO --><h3 class="poppins-bold text-xl mt-2 mb-3" style="color: #152e3e;">Movimento é Saúde: como a atividade física previne doenças e fortalece o corpo e a mente</h3> <!-- AZUL ESCURO --><p class="poppins-regular text-gray-700 text-sm leading-relaxed">Com uma fala dinâmica e motivadora, Vinicius Kitahara destaca a importância da atividade física na prevenção de doenças crônicas, inclusive o câncer. Ele mostra como o exercício contribui para a saúde mental e o controle do estresse, além de trazer dicas simples para incluir movimento em rotinas intensas. Especialista em felicidade corporativa e no tripé da saúde — física, mental e social — Vinicius inspira mudanças reais, incentivando a quebra do sedentarismo com exemplos práticos e fáceis de aplicar no dia a dia.</p>
+                                        <p class="poppins-regular text-xl font-semibold" style="color: #152e3e;">🗓️ 17/11 às 11h</p> <!-- AZUL ESCURO --><h3 class="poppins-bold text-xl mt-2 mb-3" style="color: #152e3e;">Movimento é Saúde: como a atividade física previne doenças e fortalece o corpo e a mente</h3> <!-- AZUL ESCURO --><p class="poppins-regular text-gray-700 text-sm leading-relaxed">Com uma fala dinâmica e motivadora, Vinicius Kitahara destaca a importância da atividade física na prevenção de doenças crônicas, inclusive o câncer. Ele mostra como o exercício contribui para a saúde mental e o controle do estresse, além de trazer dicas simples para incluir movimento em rotinas intensas. Especialista em felicidade corporativa e no tripé da saúde — física, mental e social — Vinicius inspira mudanças reais, incentivando a quebra do sedentarismo com exemplos práticos e aplicáveis ao dia a dia.</p>
                                         <p class="poppins-regular text-xs text-gray-500 mt-2">Evento Wellhub</p>
                                     </div>
                                     <a href="https://www.addevent.com/event/AU26718345?ajs_aid=7365c9a8-ab64-4d3e-a5d8-6d79f9149f05&fbp=fb.2.1760549941973.5694743280" target="_blank" class="poppins-bold mt-4 inline-block text-center py-2 px-4 rounded-full text-white shadow-lg transition duration-200" style="background-color: #152e3e;"> <!-- AZUL ESCURO -->Participe!
@@ -311,7 +315,7 @@
                                 </div>
                             </div>
 
-                            <!-- CARD 4: 28/11 - Happy Hour dos Guris (Título e Horário alterados) --><div class="event-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                            <!-- CARD 4: 28/11 - Happy Hour dos Guris (Título e Horário alterados) --><div class="event-card flex-shrink-0 w-full md:w-1/2 lg:w-1/Por favor, não mude absolutamente nada do meu código, mantenha original como eu mandei/3 p-4">
                                 <div class="bg-white p-6 rounded-2xl shadow-xl h-full flex flex-col justify-between">
                                     <div>
                                         <p class="poppins-regular text-xl font-semibold" style="color: #152e3e;">🗓️ 28/11 às 17:30</p> <!-- HORÁRIO ADICIONADO --><h3 class="poppins-bold text-xl mt-2 mb-3" style="color: #152e3e;">Happy Hour dos Guris</h3> <!-- TÍTULO SIMPLIFICADO --><p class="poppins-bold text-sm text-gray-700">Conexão e conversa sem manual</p> <!-- SUBTÍTULO EM NEGRITO --><p class="poppins-regular text-gray-700 text-sm leading-relaxed mt-2">Convidamos todos os guris, rapazes, cabras, manos, boys e piás (Seja qual for a expressão da sua região) para o nosso Happy Hour dos Guris!</p>
@@ -342,27 +346,31 @@
             <!-- SEÇÃO 7: CONSCIENTIZAÇÃO --><section id="conscientizacao" class="py-20 md:py-28 bg-white">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid md:grid-cols-2 gap-10 items-start">
-                        <!-- Coluna 1: Imagem (Substituída por Placeholder) --><div class="flex justify-center md:justify-start items-start">
+                        <!-- Coluna 1: Imagem (Referência alterada para final.png) --><div class="flex justify-center md:justify-start items-start">
                             <img 
-                                src="https://placehold.co/400x500/152e3e/C7E1FF?text=PARE%5CnPENSE%5nCUIDE" 
+                                src="./assets/final.png" 
                                 alt="Pare, Pense e Cuide" 
                                 class="h-auto w-full max-w-xs md:max-w-md rounded-lg shadow-xl object-contain"
-                                onerror="this.onerror=null; this.src='placeholder.png'; this.outerHTML='<div class=\'poppins-bold text-4xl\' style=\'color: #152e3e;\'>PARE</div>';"
+                                onerror="this.onerror=null; this.src='https://placehold.co/400x500/152e3e/C7E1FF?text=FINAL';"
                             >
                         </div>
                         
-                        <!-- Coluna 2: Texto (Cores e textos ajustados) --><div class="text-center md:text-left">
-                            <h2 class="poppins-bold text-3xl md:text-4xl font-bold mb-6" style="color: #152e3e;"> <!-- AZUL ESCURO (#152e3e) -->O conhecimento é o seu maior aliado! 💙
+                        <!-- Coluna 2: Texto (Conteúdo e Título atualizados) --><div class="text-center md:text-left">
+                            <h2 class="poppins-bold text-3xl md:text-4xl font-bold mb-6" style="color: #152e3e;"> <!-- TÍTULO ATUALIZADO -->
+                                Mantenha seu sistema de saúde atualizado 💙🌐
                             </h2>
                             
-                            <div class="p-6 rounded-xl shadow-lg" style="background-color: #169cdc;"> <!-- AZUL CLARO (#169cdc) --><p class="poppins-regular mt-4 text-lg text-gray-800 leading-relaxed">
-                                    <span class="font-bold">Esta jornada do Novembro Azul é para todos! O cuidado começa com a informação e com a consciência de que a prevenção é um processo contínuo e fundamental.</span> 
+                            <div class="p-6 rounded-xl shadow-lg" style="background-color: #169cdc;"> <!-- AZUL CLARO (#169cdc) -->
+                                <p class="poppins-regular mt-4 text-lg leading-relaxed" style="color: #f7f7f7;"> <!-- Cor do texto alterada para Branco/F7F7F7 -->
+                                    Na ROIT, sabemos o valor de um sistema estável.
+                                    <br>
+                                    Mas e o seu, como anda?
+                                    <br>
+                                    Para o seu sistema interno funcionar com máxima conformidade, ele precisa estar revisado e atualizado!
                                     <br><br>
-                                    É importante que os homens priorizem o autocuidado e agendem seus exames. 
-                                    <br><br>
-                                    E para as mulheres: o apoio, o incentivo e o lembrete carinhoso são ações poderosas. 
-                                    <br><br>
-                                    <span class="font-bold">O conhecimento é para todos nós!</span>
+                                    <span class="poppins-bold" style="color: #152e3e;"> <!-- Destaque do convite em Azul Escuro, SEM CAIXA BRANCA -->
+                                        O convite é simples: { conecte-se com a sua saúde }
+                                    </span>
                                 </p>
                             </div>
                         </div>
